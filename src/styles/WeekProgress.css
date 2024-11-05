@@ -1,0 +1,29 @@
+/* src/components/WeekProgress.css */
+.week-progress {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .week-progress h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .progress-goal,
+  .progress-tasks,
+  .progress-images,
+  .progress-references {
+    margin-bottom: 2rem;
+  }
+  
+  .progress-images .image-gallery img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  

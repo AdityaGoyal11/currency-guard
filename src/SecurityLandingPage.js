@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/SecurityLandingPage.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -6,14 +6,41 @@ import Footer from './components/Footer';
 // import ContactForm from './ContactForm';
 
 export default function SecurityLandingPage() {
+
+  // Add smooth scrolling when the component is mounted
+  useEffect(() => {
+    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+  
+    scrollLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Cleanup event listeners on unmount
+    return () => {
+      scrollLinks.forEach(link => {
+        link.removeEventListener('click', () => {});
+      });
+    };
+  }, []);
   return (
     <div className="landing-page">
       <Header />
       <main>
         <section className="hero">
           <div className="container">
-            <h1>Secure Your Digital World</h1>
-            <p>Follow our journey in developing comprehensive security solutions. Explore our weekly progress and innovations.</p>
+            <h1>Currency Guard, by Aditya Goyal</h1>
+            <p>A comprehensive guide to in-game currency scams, history, interviews and security meausures so you are the not one to get scammed by one of these scammy clowns!!</p>
             <div className="cta-buttons">
               <a href="#timeline" className="button primary">View Timeline</a>
               <a href="#contact" className="button secondary">Get in Touch</a>
@@ -29,7 +56,7 @@ export default function SecurityLandingPage() {
                   <div className="timeline-marker">{week}</div>
                   <div className="timeline-content">
                     <h3>Week {week}</h3>
-                    <p>Progress update for week {week} of our security project</p>
+                    <p>Progress update for week {week} of my security project.</p>
                     <a href={`/articles/week-${week}`} className="button primary">
                       Read More 
                       <svg
@@ -56,7 +83,7 @@ export default function SecurityLandingPage() {
         <section id="about" className="about">
           <div className="container">
             <h2>About Our Security Project</h2>
-            <p>Our security project is a 6-week intensive development process aimed at creating cutting-edge protection for businesses and individuals in the digital age. Follow our weekly progress to see how we're advancing the field of cybersecurity.</p>
+            <p>My project explores the hidden dangers of in-game currency scams, specifically targeting young players through fake websites, phishing, and deceptive practices. With a focus on the psychological impact, security risks, and legal challenges, I aim to shed light on how these scams operate and what can be done to protect young gamers. By raising awareness and advocating for safer digital environments, I hope to empower both players and parents to navigate gaming spaces with greater security and knowledge.</p>
             <div className="cta-buttons">
               <a href="#timeline" className="button primary">View Timeline</a>
               <a href="#contact" className="button secondary">Get in Touch</a>
