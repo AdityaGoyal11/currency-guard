@@ -1,0 +1,48 @@
+.week-content {
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .week-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .week-content h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  .week-content p,
+  .week-content li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .week-content ol,
+  .week-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .week-content ul {
+    list-style: disc;
+  }
+  
+  .references ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .references ul li::before {
+    content: "📌 ";
+    margin-right: 0.5rem;
+  }
+  
