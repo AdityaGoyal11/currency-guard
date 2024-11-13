@@ -1,6 +1,6 @@
 // src/components/weeks/Week1.js
 import React from 'react';
-import './Week1.css'; // Optional: Add styling if needed
+import './Week.css'; // Optional: Add styling if needed
 
 const Week1 = () => (
   <div className="week-content">
